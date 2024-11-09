@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- FrameLayout to hold fragments -->
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+        <!-- Buttons for navigation -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dashboard"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/ic_baseline_dashboard_24"
+                android:drawablePadding="4dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnGrievance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Grievances"
+                    android:backgroundTint="@color/white"
+                    android:drawableTop="@drawable/ic_baseline_view_list_24"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/redDot"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/red_dot"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+
+            <Button
+                android:id="@+id/btnAnalysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Analysis"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/ic_baseline_analytics_24"
+                android:drawablePadding="4dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Settings"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/ic_baseline_settings_24"
+                android:drawablePadding="4dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/settingName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Setting Name"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Dark Mode section -->
+    <LinearLayout
+        android:id="@+id/darkModeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"> <!-- Set visibility to gone initially -->
+
+        <TextView
+            android:id="@+id/darkModeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dark Mode"
+            android:textSize="16sp" />
+
+        <Switch
+            android:id="@+id/darkModeSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- Alert section -->
+    <LinearLayout
+        android:id="@+id/alertLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"> <!-- Set visibility to gone initially -->
+
+        <TextView
+            android:id="@+id/alertText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Alert"
+            android:textSize="16sp" />
+
+        <Switch
+            android:id="@+id/alertSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

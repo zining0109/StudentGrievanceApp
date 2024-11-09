@@ -1,0 +1,39 @@
+[versions]
+achartengine = "1.1.0"
+agp = "8.5.2"
+cardview = "1.0.0"
+eazegraph = "1.2.2"
+graphview = "4.2.2"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+library = "2.4.0"
+material = "1.12.0"
+activity = "1.9.2"
+constraintlayout = "2.1.4"
+firebaseInappmessaging = "21.0.0"
+mpandroidchart = "v3.1.0"
+mpandroidchartVersion = "v3.0.3"
+
+[libraries]
+achartengine = { module = "org.achartengine:achartengine", version.ref = "achartengine" }
+androidx-cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
+eazegraph = { module = "com.github.blackfizz:eazegraph", version.ref = "eazegraph" }
+graphview = { module = "com.jjoe64.graphview:graphview", version.ref = "graphview" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+library = { module = "com.nineoldandroids:library", version.ref = "library" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-preference = { group = "androidx.preference", name = "preference", version = "1.2.0" }
+firebase-inappmessaging = { group = "com.google.firebase", name = "firebase-inappmessaging", version.ref = "firebaseInappmessaging" }
+mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchart" }
+mpandroidchart-vv303 = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchartVersion" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+

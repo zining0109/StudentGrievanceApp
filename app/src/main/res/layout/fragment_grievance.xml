@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/settingName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grievance"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:background="@color/yellow" />
+
+        <!-- Top bar with menu button and search view -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Menu button -->
+            <Button
+                android:id="@+id/btn_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawableStart="@drawable/baseline_menu_open_24" />
+
+            <!-- Search bar beside the menu button -->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:queryHint="Search grievances"
+                android:layout_marginRight="8dp" />
+        </LinearLayout>
+
+        <!-- Hidden dropdown buttons for Categories, Status, and Urgency Level -->
+        <LinearLayout
+            android:id="@+id/menu_dropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:layout_marginTop="-24dp">
+
+            <Button
+                android:id="@+id/btn_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Categories"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:drawablePadding="13dp"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:drawablePadding="17dp"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_urgency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Urgency Level"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:drawablePadding="10dp"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Hidden dropdown for category options -->
+        <LinearLayout
+            android:id="@+id/category_dropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:layout_marginTop="-24dp">
+
+            <!-- Category option buttons -->
+            <Button
+                android:id="@+id/btn_academic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Academic"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_administrative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Administrative"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_facilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Facilities"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_food"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_financial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Financial"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_harassment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Harassment"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_it"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IT"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_others"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Hidden dropdown for status options -->
+        <LinearLayout
+            android:id="@+id/status_dropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:layout_marginTop="-24dp">
+
+            <!-- status option buttons -->
+            <Button
+                android:id="@+id/btn_pending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_inprogress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="In Progress"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_resolved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resolved"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_closed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Closed"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Hidden dropdown for urgency options -->
+        <LinearLayout
+            android:id="@+id/urgency_dropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:layout_marginTop="-24dp">
+
+            <Button
+                android:id="@+id/btn_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="High"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medium"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btn_l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Low"
+                android:backgroundTint="@color/white"
+                android:textAlignment="textStart"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/grievanceListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="1dp"/>
+
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
